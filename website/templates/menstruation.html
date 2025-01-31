@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/menstruation.css')}}">
+        <style>
+        .nav{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px 0 25px;
+    background-color: #fff;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.10);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.nav .links a{
+    margin-right: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+.nav .links .mainlink{
+    color: #e0501b;
+}
+
+.nav h4{
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 25px;
+}
+.heading{
+    font-size:30px;
+
+}
+
+    </style>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&family=Open+Sans&display=swap");
+
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --border-color: #e0eeff;
+  --primary-color: #2563eb;
+  --article-width: 68ch;
+}
+
+.site-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+// text elements
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0.5em 0px;
+  padding: 0.5em 0px;
+  border-bottom: 1px solid var(--border-color);
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: bold;
+}
+
+h1 {
+  border-bottom: 1px solid #2563eb;
+}
+
+small {
+  font-size: 16px;
+}
+
+p,
+ul,
+ol,
+input,
+small {
+  line-height: 1.5em;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  margin: 1em 0px;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+  &:hover,
+  &:focus {
+    background: var(--primary-color);
+    color: white;
+  }
+}
+
+blockquote {
+  font-size: 24px;
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+  left: -16.5%;
+  margin: 0.5em 0px;
+  padding: 0.5em;
+  transition: all 0.3s ease-in;
+  cursor: text;
+  // border-left: 3px solid #2563eb;
+  @media screen and (max-width: 868px) {
+    left: 0%;
+    background: none;
+    color: black;
+    padding: 0px;
+  }
+  &:after {
+    content: "";
+    background: var(--primary-color);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 0%;
+    z-index: -1;
+    transition: all 0.3s ease-in;
+    transform-origin: left center;
+  }
+}
+
+blockquote.active {
+  color: white;
+  &:after {
+    width: 100%;
+  }
+}
+
+// layout elements
+
+.article {
+  position: relative;
+  max-width: var(--article-width);
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  margin: 0px 1.2em;
+  * {
+    z-index: 1;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    left: 33%;
+    height: 100%;
+    width: 1px;
+    z-index: -1;
+    background: var(--border-color);
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    left: 66%;
+    height: 100%;
+    width: 1px;
+    top: 0px;
+    z-index: -1;
+    background: var(--border-color);
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+    </style>
+    <title>Title</title>
+</head>
+<body>
+
+
+<div class="nav">
+            <div class="logo">
+                <h4>HealthCare Plus</h4>
+            </div>
+            <div class="links">
+                <a href="/home" >Home</a>
+                <a href="/corona">Corona Corner</a>
+                <a href="/articles">More Articles</a>
+            </div>
+        </div>
+<div class="site-wrapper">
+  <div class="article">
+    <header>
+        <p style="font-family:Arial, Helvetica, sans-serif"><br><br><center><h1>~~~Menstrual Health: A Taboo?~~~</h1></center></p>
+        <img src="data:image/jpeg;base64,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" alt="">
+        <p style="font-family:Arial, Helvetica, sans-serif"><strong><center><br>There are certain problems that are specific to females.</strong></center></p> <br>
+          <p style="font-family:Arial, Helvetica, sans-serif"><center>But many females doesn't have a proper knowledge about them, due to which they can't take proper precautions and other health care
+          methods which can help them in staying healthy during the difficult days. So let us talk about one the most common problem faced by all
+          the females of the world i.e.<strong> MENSTRUATION</strong>.<br><br>
+Menstruation, also known as a period, is the regular discharge of blood and mucosal tissue (known as menses) from the inner lining of the
+          uterus through the vagina The first period usually begins between twelve and fifteen years of age, a point in time known as menarche.
+          It usually happens every 1 month. Beside the bleeding, other signs -and symptoms of menstruation may include headache, acne, bloating,
+          pains in the low -abdomen, tiredness, mood changes, food -cravings, breast soreness, and diarrhea.<br><br>
+
+Most women stop getting their period when they're between 45 and 55 years old - this is called menopause. Menopause can take a few years, and
+          periods usually change gradually -during this time. After menopause is totally complete, you cant get pregnant
+            anymore.<br></center></p>
+
+          <h1><center style="font-family:Arial, Helvetica, sans-serif">What is The Menstrual Cycle?</center></h1><br>
+          <br>
+         <img src="https://cdn.shopify.com/s/files/1/0687/5797/files/cycle-to-do-SAMP2_large.png?v=1502724643" alt="">
+          <p style="font-family:Arial, Helvetica, sans-serif"><br>The steps in the menstrual cycle e triggered are by the rise and fall of chemicals in the body called hormones. The pituitary gland
+          in the brain and the ovaries in the female reproductive tract manufacture and release -certain hormones at certain times during the
+              menstrual cycle that cause the organs of the reproductive tract to respond in certain ways.<br><br></p>
+          <h1><center style="font-family:Arial, Helvetica, sans-serif"What are some of the symptoms of a normal menstruation?</center></h1>
+        <p style="font-family:Arial, Helvetica, sans-serif"><ul><li>Moodiness</li>
+            <li>Trouble sleeping</li>
+            <li>Food cravings</li>
+            <li>Cramps in the lower abdomen and back</li>
+            <li>Bloating</li>
+            <li>Tenderness in the breasts</li>
+            <li>Acne</li>
+      </p>
+    </header>
+    <main>
+      <h1><center style="font-family:Arial, Helvetica, sans-serif"<br>Symptoms which may indicate a need to contact to a doctor:</center></h1>
+      <p style="font-family:Arial, Helvetica, sans-serif">
+        <ul> <li>You have not started menstruating by the age of 16.</li>
+        <li>Your period stops suddenly.</li>
+        <li>You are bleeding for more days than usual.</li>
+        <li>You are bleeding more heavily than usual.</li>
+        <li>You have severe pain during your period.</li>
+        <li>You have bleeding between periods.</li></ul>
+        <p style="font-family:Arial, Helvetica, sans-serif"><br><br>Menstruating women manage menstruation primarily by wearing menstrual products -such as tampons, napkins or menstrual cups.
+            These products catch the menstrual blood to prevent it from staining and damaging clothing and inconveniencing the wearer.<br>
+
+Menstrual products (also called "feminine hygiene products) are made to absorb or catch menstrual blood. A number of different products
+        are some are available, some are reusable some are disposable.<br><br></p>
+        <p style="font-family:Arial, Helvetica, sans-serif"><center><h1>Here are some available disposable products easily:</h1></center></p>
+        <ul><li><strong>Sanitary napkins</strong>(also called sanitary towels or pads) - Rectangular pieces of material worn attached to the underwear
+        to absorb menstrual flow often with an adhesive backing to hold the pad in place Disposable pads may contain wood pulp or gel products
+            , usually with a plastic lining and bleached.</li>
+
+            <li><strong>Tampons</strong>-Disposable cylinders of treated rayon/cotton blends or all-cotton fleece, usually bleached, that are inserted into the
+                vagina to absorb menstrual flow.</li>
+            <li><strong>Disposable menstrual cups made of soft plastic</strong>: A firm, flexible cup-shaped device worn inside the flow. vagina to collect menstrual
+                flow.</li>
+        <br><br><h1><center style="font-family:Arial, Helvetica, sans-serif">Problems related to menstruation:</center></h1>
+        <img src="https://img.emedihealth.com/wp-content/uploads/2020/10/period-problems-pitches-feat-1.jpg" alt=""><br>
+            <p style="font-family:Arial, Helvetica, sans-serif"><ul><li><strong>Period problem: Menstrual pain (dysmenorrhea):</strong> <br>Pain that
+                you get with your menstrual period is called dysmenorrhea. Pain is the most common problem women have with their periods. More
+                than half of women who have periods get some pain around their period </li>
+                <li><strong>Period problem: Irregular periods</strong>:<br> Your menstrual cycle is shorter or longer than average This that the time from the means
+                first day of your last period up to the start of your next period is less than 24 days more than 38 days.
+Irregular periods are normal for teenage girls and peri menopausal women. Teen girls periods may be irregular for the first few years
+                    before becoming regular more During the transition to menopause, called peri-menopause, menstrual cycles may more irregular
+                    over time.</li>
+        Causes of irregular periods include:<br>
+                <ul><li>Eating disorders.</li>
+                    <li>Thyroid problems, such as hyperthyroidism</li>
+                    <li>High amounts of prolactin in the blood (hyperprolactinemia)</li>
+                    <li>Certain medicines and some others.</li></ul>
+
+                <li><strong>Period problem:Heavy Bleeding</strong>: heavy period affects one in every five women each year. If you have heavy bleeding, your periods
+        may be so painful and heavy that you find it hard to do normal activities such as going to work or school.</li><br>Causes of heavy bleeding include:<br>
+                <ul><li>Problems with ovulation</li>
+                    <li>Problems with uterine lining</li>
+                    <li>Thyroid and other problems.</li></ul>
+                <li><strong>Period problem: Unusual (abnormal) bleeding</strong>: Unusual or abnormal bleeding is any bleeding that is different from your typical menstrual period
+                    or happens when you do not have your period.</li><br>Causes of unusual bleeding include:<br>
+                <ul><li>Hormonal changes.</li>
+                    <li>Endometriosis</li>
+                    <li>Ovarian cysts.</li></ul></p>
+                <br><br><h1><center style="font-family:Arial, Helvetica, sans-serif">Simple ways to improve the Menstrual health or reduce certain symptoms:</center></h1>
+                <p style="font-family:Arial, Helvetica, sans-serif"><ul><li><strong>Exercise</strong>: Studies have found that women who exercise regularly. are less likely to suffer menstrual pain, cramps and mood
+        disturbance. We are not certain why exercise is helpful for PMS but studies demonstrate that exercise can release happy hormones
+                    such as serotonin and endorphins, which may explain the benefit.</li>
+                    <li><strong>Diet</strong>: A growing body of evidence suggests diets rich in omega-3 fatty acids such as fish, calcium and vitamin D. and low in animal fats,
+        salt and caffeine may reduce the risk of troublesome symptoms. Avoiding salt can help reduce fluid retention, abdominal bloating, breast
+                        swelling and pain. High caffeine intake can cause irritability, poor sleep and menstrual cramps.</li>
+                    <li><strong>Change your sanitary napkins every 4.6 hours</strong>: changing the sanitary napkins or tampons every 4-6 hours is the crucial Part of vaginal
+        hygiene. Menstrual blood when released from the body attracts various organisms to the body which modify and multiply in the warmth of
+        the blood and causes irritation, rashes or urinary tract. infections. Changing regularly curbs growth of these organisms and prevent
+                        infections.</li>
+                    <li><strong>Wash yourself properly</strong>: Washing your vagina regularly is extremely important, because the organisms cling to your body after you!
+        have removed your sanitary napkin. Most people wash themselves regularly. but not the right way--which is, using your hands in motion from
+        the vagina to the anus, not vice-versa. Motioning your from the anus to the hand vagina can lead to the transmission of the bacteria from
+                        the anus into the vagina or urethra opening leading to infections.</li>
+                    <li><strong>Don't use soaps or vagina hygiene products</strong>-While using vaginal hygiene products everyday is a good idea, using these products during
+        menses can turn things around. Vaginas have their own. cleaning mechanism which comes into play during menstrual cycles, and these
+                        artificial hygiene products can hamper the natural process leading to infections and growth of bacteria.</li></ul><br></p>
+        <br><br><h1><center style="font-family:Arial, Helvetica, sans-serif">Role of Men/Boys towards Menstrual Hygiene Management:</center></h1>
+        <br><img src="https://menstrualcup.co/wp-content/uploads/2016/04/menstrual-hygiene-day.jpg"alt="">
+       <p style="font-family:Arial, Helvetica, sans-serif" <br><br>One of the main reasons why menstruation is a taboo and menstruation hygiene is neglected is gender inequality. Unequal rights
+        given to men and women result in women's voices being ignored within households and -communities and in development programs.
+        Due to cultural norms and stigmas.
+
+<br>menstruating women are not allowed to use water and sanitation facilities and in some cases, even excluded from home as menstruation is
+        considered impure. Therefore, comprehensive programs that engage both men and women should be organized related to menstrual hygiene.
+Men can support and influence women and girls in managing menstruation in households, schools, work, and community through many roles as husbands,
+        fathers, brothers, students, teachers, colleagues, Leaders, and policymakers. By reviewing literature, it was found that at household level
+        men do not support women. regarding menstruation hygiene and never have they discussed menstrual issues with their wives and daughters. As they are decision-makers at household level, in many cases they do not give money to buy menstrual products such -as commercial sanitary pads, tampons, and menstrual wastage cups as they consider it money So women have to rely on cheap
+reusable cloth pads which they have to wash, dry, and use again. In other cases, due to low family income, men hesitate to give money for such
+        costly products. So, in both cases, women have to compromise with their menstrual needs and personal hygiene.
+
+<br>Decisions related to constructing toilets in houses are also taken by male members. So it is a big barrier in menstrual hygiene as women find it
+        difficult in cleaning and -changing menstrual materials in privacy. Women and girls who have toilets at home feel shy and embarrassed as
+        the drain that leads out is not covered and there is a chance of seeing blood flowing in drain by others. Most men do not know about the
+        menstruation and physiological changes in women during menstruation and menstrual cycle, so it is difficult to change their perception
+        regarding menstruation and menstrual hygiene. Due to unwillingness, myths, prejudices, and misconceptions, it is difficult to talk about
+        menstruation with men and boys. But by engaging them into group discussions and regular community meetings, change their perception and
+        we can make them aware about their role regarding menstrual hygiene management.
+
+
+
+        </p>
+
+
+
+         <br> <img src="https://www.ircwash.org/sites/default/files/resize/uploads/menstrual_hygiene_matters-200x200.jpg" alt="">
+
+
+<br>
+</p>
+
+    </main>
+  </div>
+</div>
+
+</body>
+</html>

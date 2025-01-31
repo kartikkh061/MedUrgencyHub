@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/teeth.css')}}">
+        <style>
+        .nav{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px 0 25px;
+    background-color: #fff;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.10);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.nav .links a{
+    margin-right: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+.nav .links .mainlink{
+    color: #e0501b;
+}
+
+.nav h4{
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 25px;
+}
+.heading{
+    font-size:30px;
+
+}
+
+    </style>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&family=Open+Sans&display=swap");
+
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --border-color: #e0eeff;
+  --primary-color: #2563eb;
+  --article-width: 68ch;
+}
+
+.site-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+// text elements
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0.5em 0px;
+  padding: 0.5em 0px;
+  border-bottom: 1px solid var(--border-color);
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: bold;
+}
+
+h1 {
+  border-bottom: 1px solid #2563eb;
+}
+
+small {
+  font-size: 16px;
+}
+
+p,
+ul,
+ol,
+input,
+small {
+  line-height: 1.5em;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  margin: 1em 0px;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+  &:hover,
+  &:focus {
+    background: var(--primary-color);
+    color: white;
+  }
+}
+
+blockquote {
+  font-size: 24px;
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+  left: -16.5%;
+  margin: 0.5em 0px;
+  padding: 0.5em;
+  transition: all 0.3s ease-in;
+  cursor: text;
+  // border-left: 3px solid #2563eb;
+  @media screen and (max-width: 868px) {
+    left: 0%;
+    background: none;
+    color: black;
+    padding: 0px;
+  }
+  &:after {
+    content: "";
+    background: var(--primary-color);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 0%;
+    z-index: -1;
+    transition: all 0.3s ease-in;
+    transform-origin: left center;
+  }
+}
+
+blockquote.active {
+  color: white;
+  &:after {
+    width: 100%;
+  }
+}
+
+// layout elements
+
+.article {
+  position: relative;
+  max-width: var(--article-width);
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  margin: 0px 1.2em;
+  * {
+    z-index: 1;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    left: 33%;
+    height: 100%;
+    width: 1px;
+    z-index: -1;
+    background: var(--border-color);
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    left: 66%;
+    height: 100%;
+    width: 1px;
+    top: 0px;
+    z-index: -1;
+    background: var(--border-color);
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+</style>
+
+    <title>Teeth</title>
+</head>
+<body>
+
+
+<div class="nav">
+            <div class="logo">
+                <h4>HealthCare Knowledge</h4>
+            </div>
+            <div class="links">
+                <a href="/home" >Home</a>
+                <a href="/corona">Corona Corner</a>
+                <a href="/knowledge">More Articles</a>
+            </div>
+        </div>
+<div class="site-wrapper">
+  <div class="article">
+    <header>
+        <br><br><center style="font-family:Arial, Helvetica, sans-serif"><h1>~~~Healthy Teeth, Healthy Smile~~~</h1></center>
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYWFRgWFRYYGBgaGBgYGhocGBoYGhgYGBgZGhgaGhgcIS4lHB4rIRgYJjgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHxISHjQrJSs0NDQxNDQ0NDQ0NDQ0NDQ0NDE0NDQ0NDQ0NDQ0NDQ0NDQxNDQ0NDQ0NDQ0NDQ0ND80NP/AABEIALoBDgMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAEAQIDBQYABwj/xAA6EAABAwIEBAQEBAUEAwEAAAABAAIRAwQFEiExQVFhcQYigZETobHwMkLB0QcUUmLhFYKi8SNjkhf/xAAZAQADAQEBAAAAAAAAAAAAAAACAwQBAAX/xAAoEQACAgICAgIBBAMBAAAAAAAAAQIRAyEEMRJBIlETFDJhoRVxkQX/2gAMAwEAAhEDEQA/APSS5RueuJUb3KRnpJEb3qvvKqlr1IVPiFzA6nZLlIdCNsRlTM5aCwpaa+ypcJoTqVpKIgaLscfbByy9IJGyVNbzXEp6JWc8ISqzfQosBMe1canRUVrMEodtnG4V09ihLOO+/RD4oYpsr/5MJBYhWBCdlWOKZ3mwNlqJUnwUTl7rnBdSO8mCFkJjmopzUxzVwSYA8IWoUfUG6gcxCw0wE7apj3x980W+koH0JXGgVTVDlisXsA3Ve98Ext9IWqNhJX0T0B78lZ21IuiNpAPSeKpaY34uj0bB3KvbJ2wGuYgtHGDu93JuunZNjFAzVIKubEsbm91Q4hVkaLS+IrsMokEwToOvZYh9WQsypRdIXiuStgto3zrQ0GaKjtG+daGg1TUUNj/hoilo1NDFIRARRWxUmRW4l3qt5YjyN7LDWg8w7rd2n4R2VGD2S8p6RRPehaj057kFcvSWyqMSC5rc1Q0iaj54DZTYtc7NG537IjCqEAJXch37Y2XllTgBWNNB0Go9jYVEURzZKEsLgEoCMXY2FxCfC6F1GWRZU0sU6TKso6wbJ/ldCJLEzKuo2yHKlLFOKa4t5rKNTBixRPYjXiOCHrVQAu8RkbfQE6mozTS1b1uqBffHgg6KI4ZMIrQNyFWXN6B+FQ3NUncoB5Wj44UtsWtcuMyow0kgakngJHSZO/FcR6qzwuza55DyYbMhvFrZkEjq2YHM80cY2zptQVkeF28vymTldHJoPM89jHOFobC0axklxkwXOOhygadggbS2ILnukNzF44QSdIb6blebeM/F1d730GvLaYOUxoXRzI4Jq0uiLJLyfei48X+KWVaop0yCxmk83az6KKwq5gvPrZ0uHdegYIzyhTZLux0GvHRZUGeZXtsNFVMZqre2Sgm9BLUlbZPaEyujXQl9jrJuo7rcW34R2WJtBqFtrf8ACOyfh6JOT6MjUqKtu6sSeQkqavVWev7kudlB049VLKR6MYkdEF78xWjsafDgqnD6XutFaU+i6EQMsg6iyAigFCxqJYPsKlEkhzQlauhc1aCcUsJCVwctMOKcAuKifXa3UlbRyTfRMAkMKprYu3gq65xJziRm8s8PLshckiiPGnLvRoK14xu5gyPmgLnGAJDQDp6Aqic6dSfmmOe0cf014oXN+iqPEiu9llXxN7hGw0lAVa5P5idOvsozVH2TwSA9P0QttlEYRj0hS7VNc77KQlc8BcFZA/ohntRFau1o1Q9N5MmOH10XaMb0IG69dvv9+isnXgt2f+14EQfwsMSekxE7knog6L8nAF3XUD905lqXv8+pcZJPJMT1omm03voPYXPax7pE8OA5LybxjhDqFw6ZLXkvaecnUekr2w0vII0EiB2WZ/iPhAqWRqgeak4O/wBpMO+Rn0ReyKUkzyWwZLgvR8GZ5QsBhDJeF6RhlOGhJntlUVUA/IrC3QrQi7cpLO9BbFFXUtNMrbpi6FPsmsxqFs6H4R2WQsW+YLY0RoOyfh6JeS9o8txG6gQDqVWW9OSmveXuVtYW3RQpWz0pPxRYWFCAFdUGQhbalAR7GaKmMaJJytkzApWlRsCemChxckzKB70NWu2t/wC1lhRg5dBvxFH/ADLf6tVTV75zojyzOu3zOiDdVGuYz0B0nvxW+RRHjfZaX2KHZpHU8f8ACBr1nP1J077ek80K94jQfNDvuWjQnXkEDlfZVDFGPSDoB2jXcuMAeoQ9R0aCDHL7lV1S9OwHvpqoHV3H8zvohckOUWixqVTzA7/sh/j6+XXqToq9zxx176qM3LvygrLCSLQVTzjsP1KeKo3+plAUKdR2zfdWtph1R3L2XJgSnGK2R/zIGwJQ9a4ceEK2dglQ7uJ7QPoh6mDEbytqTFLPB+ymBAMuM/Q/urXDbUv6BDf6Uc2uuq12CWUMGi2MW3QPJyKMLTAX4SI03UVtQIeAdCDHotX8AIV9mC9ruX2E7wo81Z3VMay3lsQqrxPb57G5b/63fILQUhBQ2MUppV2/1U3fNpR0JUtnz5grPOF6RYs8oWDwyjDmnsvQLAeUKaR62ReKQU0IigoQ1T0kpikwmmUx26e1MnVH6AfZYYY2XjutazZZjB2+cLUBU4uiLO/keRWNtJWgtqIAUFnbwrakxSQjSLZztklJiKAULdE2pXA4p6EU5MJLgNVBXvAAqu6xIN4qju8YmQELkkVYuO3tl1c352mPr7oB1wOPuqJ16ec/Qduqjddni720QORdHEo9F5Uuo3kjv+iEffn8oHqqr4hP3KJtrVzzxWeVhVGK2dUrPduSoHuWmtcFYIzS7psP8+oRIw1omBAO44Rw+iJRb7FfqI3SMmyi92zSVYUcEe6JIE/Ic5V3b2kGIVtQt5jZaoIHJna6M5TwAN1JlE0sOaOC1lPD5CZcWEDQI/CukS/qrdNlNa2oAgBX9tZBrdtUHZ0vMO6vcqZCNkvIyO6Bf5cKGragiIVjCa5qZ4omUmmZa5sYcBGhKvaFLKABtACfVYntOiGMaYyeVySTGkKF7FO5RuR0KIKY1QPiTEGUmEvcBmYRrxQ3iHxNbWQzV3w5zZaweZ7400b+p0XjuOeJH31z8VzcrAMrGTOVo5/3Hc/4QTlSKOPi/JNJhdtR0BWvwsy0LO4YyQFocNZBhTJHq5tosGhPYE/IkyoWiVMnbsmtGqc3ZJT3XA+y7wRnmWiVJgbNyrtVQVIhzO5GKosRAdCgzQgL6/yhTJpFsYOToPubqBus3f4vEgFUmM+IYJaDJ5fvyWeNd7z5j6DQLm2y7FgUey+ucQLt3ekyf8IUVC7h7/so7WhpsrRlvACGim6BaVBx0JKIpYfBmFd2FkHwANVbjBXwYExrp+y1RbFSzxi6bKW0tQRstNhVgDwjTVV1OllO0LRYOZJHQI4xVkvJm1FtFjQtWgRlb6iVFcYeOGn0ViwJXNVHiqPJWSSdmZdQynUQrDDKcmeARV3ah468F2H0sjYO5KWotSoonmUofyHQkLUrSuTyQEFANeHAaGZ6Hmi0x6UFYlRrbfY9NK6UiIwjqBRMKfXqta0uc4NaNSSQABzJOwXnONfxDyViy3ayqwNAzuzAF8mcpH4mxHz1hC5JdjceKeR1FHoblS474ht7ZpNV4zRoxvmeezeHcwF5piHjK7qzNTI0/lpjJ/y1d81kq9fMTJkzudZKF5PopjxGv3MF8X44+9uXVnNyiAxjJnIxuwniSSSepU2D2x0JQwtJcFqbG1gDRJnK9FnFweDcizwynstbbWMAOCpMMoQJWwwrzM03Gi3GrO5MmtoCexNLUddU4KFcEMo7JIytHNGiSm3VOaNEtIaoaNNNgzIZKskJhzIYEUqo9EM3cmYV7tFhfFmKlgLR+I6D91rbioQCvLvEj3muQ/gBEGdDufl8lCnZ6+L42yupuMyZ11JV3h5EiUDbUZVnRsXbt4awjtjfyKtm9sMEY4CZGm4SXeEuYNBIV9hOrG9grN9IRzTVjuJAuTKMjP8Ah6iMxngB8ytUykFV0bZrH5hpOhHBXFI6I4RrQnNPyl5ICvMPa/XYqLD6BZM8Y9grVwQ1y4NaXEwBqT0WuCuwVkk14+g6k7RSKvsrlrmhzSC07EbI4ORraFSjTEc1VdzitJlZlF7w19QOLAfzZIkTwPmEc4KLv7xlJjn1HBrWiS4mAPvkvAPFmMOu7l1bUNENpt4tY0yCf7iSSeU9EE5KJRxuPLK39fZ9DsclzLwrD/HN/TYGCoHgCA57Q5wHIu3d3MlLceKb5/4rl4ng3KyPVrQfms/NEb/j8l9o9turplNpdUe1jRu5zg0D1KxNv/EmgK9Rj2u+CHD4dVrSZAaA7Mz8UZs0EDaNOJ80qtc85nuc939TyXH3cSVwtwglmfopx/8AnRp+Tv8Ao9frfxBsWiRUc88m0qg+bmgfNZzFP4mPIi3oBv8AdVMn/wCGGP8AkVhRTASEch27ofyyYyPBwx27f+yfFcWr3BmvVc8TIbMMHKGtho7xKr3OA5K4tsArvAOXIP7t47K/w7wxSYJf53czt6BYlKTCnkx41S/4jDso1HjMxhjnGiMZgzIl5JO62161oYWtAGkaKmt8Pc46opfECDc/4Km1w0F8gacFeULTVWNCyAGyJDAEv+Sm0lSGMECFceHTD3ciPmqZ7lZ+HnebunQ7JeQvgy6xNmxVaArvER5AqYLZr5EGN6ODU63Z5guDURYs847oK2E3o01BsNHZSprdk5UETMHWtQQsj4owF1RrXMaM7SeQzDlK3bUPXog8FEkj04yo8osKcGDuNCDuCNwRzV5SEBaO+wKm+XNaGv3JH5jxlV1XB3FpyuLTwkT6xOvunxcV2E4uXTNJ4auwWN112PcLQtevJLHAcQtnOqUarHgmXMcS3N/tOg9wicQ8c3lFpY+1DHxAeXFzO4gQf/pMjOKWyaWCTejZ+JvEdG1ZL3S86tY3V7vTgOpVzgmKMr021Kbpa4SOnMEcCNoXzw+s+s8vqOL3uMlxMk/sOi0+BXta3M0XlvEt0LXRzadJ67oPyfK6HviXDT2e33Nyym0ve4Na0EucTAAG5JXj/jfxk66IpW+dlEGXH8Lqh4SNw0cuPHZQ+IMcuLgBlZ0N0dka3K08nH+r1VTbWoJQ5MjlpDuNw1D5T2/6D/D2O3Nuf/G/M07sfLmHqNZB7Faj/wDQrkCBSpA8/OflKpLSwBEAa6RtHWVZ18FY7McwYQ7LlOoaA2dT+qGPmlpjsmPC5XJGfxnFq1yZrvc6D5WAAMbpuGjc9TJ13VfSsCdY/b3Wio4M4hzohoLdT/dMfQo+1sPhmGjPLi0AgkmTGgAHI6rPGT7GecIKomXp2HQzIA0OvNFtsYJDgRGsEHXX5FajErZjSYL2akT+LzgnPE6gbIN1UvcAPM58ZjqXTIiOGkLXCnRiytqykFmdBrrJ46Rrr6BNZQLtGiT0En2C21r4YAJfWMcmT9TufkrVlGmxsMa1o6ABEsLfYmXMS1HZh8L8Nvqk/EzMaOYgu7StXY4HRpfhaJ5nU+6dUuQDoo6t047BalCImTzZX9IluXhohVguNN+akexzt0lO2CF5N6GQ41fuZCyjmMo6lagJGNhENqaIO+x7XiqiRPZCDqlFV3hAVnrg4kT3K+wFgADupBWdLle2FSKRA3zApmPsn5P7aNDdGWKodujDVJAHRBVTBRTds86KrRO0IzDWS8IalqFZYUzzErorYM3SZchcuXJpKY9jpXEKKg/giFEuj0XpiU2c091u13Jc1SNcjizLfoG+GWcyOSG/lmuLp4u20jqI9lakId9ETI0P7bJgyOQqa/hm3fJ+G0O55QHa7eZoGiAr+DmR5cw7HMPmtECQRJO4E75TP0U/xxxGg0JiZ91vjFjFklHrZgb/AMLPMf8AkDoEAOBBgbCULTwCq0/hB/3D9V6gHsEtdA68PWdt1FQs2OMjltznsheL6YceXS2jDWdu9kh7DGnEcuEIhj3D8TSdZ35zoee61gsGOJDTtBPH0II0UVfC4jUanQHQ+33uu8ZLo38+OT2ZqpWe4BuRrRmBIHHLMSOkqf4z5aZIjl0EQOm6uWYa5wzZdO4kp4wsxtH6dzw4e66pmvJhKFzASSWAyZMzqTuo7e0yPzsblOun5dRroVpv9JcBuJ49PXioXWDpiB98e23uFzjP2asuLpADrmo7d3s0fVMyOO5JR5tXaaTpOh4DfvvPso6lMt5QTpx6gjmIj3QtSfZsZQWopEDKAUhEbJM2g7n9FG9/36BCMVs5yY56T4ige9cGkTB6YXqF70yo9cbQ59RDvcucZUDnarjjnOV9hbyQDwAj1VFRty89Oa0VpDWgI4uiTkSVUH5kNXKkY9DvctbIUth1k6dFeYayJKz1i7VaixHlRwE5tBS5cuTCcxDxGqlpvXV2qKluoFpnptWgsJwKY0p4RoAkBSO5rgUpRpgkT2z980yqYH15dvvoiIUb26feqKw4yoFMhuUEaj83fnwTaeYfhIA0IExmEzDTz6dU6rSkctp7JlZ7u46cR6LvIcnaON+Wg5paSZ2IlwBgkg6d+y519mAzgATuJ4D5b/NDF7hqN9jIaWRBkEEAKB1IRmHctHfhpw5H3575MZGEfotxiOQQCY8sQQRlkT1BgfZXHFydGkQMpknfUb8TBJ07KhcY2eSNZBEEcdQdN+KjdxMb8thssc2EuPB7Zff61Ug5i08IgR1OYHhpso34u87HWAJMHTiIgdd/6iqdrjtPNND0PnINcfH9ItnXzg2J/LlBM6Ahv4YIA0AE67Sh3VydfYcgOnt7c0EX9UwVELk2MjijHpBLqqje9R5kshCM0K56YXSnFRkojLGvKWZCQv8AUpmsQEN0Y5IR5gptNuY9E5lAlHU6YAXWJnlS6OosjZGsch2sUzQtTJJuydr01xSALitsCgi2dBWtsHS0FY6mtLgdWWlvJMxP0Izx1ZbLly5PJDJVWoYtRL3So3KBnpo6kVO1DtUoK1MFokldKalKNMyh+ZNhIHJCYW2C0c9qa6mnNclLgiTNtoEqU/T5fRQNoaa/9o9yjyrrDU2kVNaiZ+SgNExt7fUq7+GkLN0BRHOykdRI4JhYVduYJTHUwsYazlNkSCmVbZAEw0wsD/OVgZw3SsZ0RxoceiT+X0WWY84E86KLISrF1FNbT6LLYDygjbeP3U4pKdzfqUrQtSFubZCxilDVJlTmsWgkbQpGtTwyErQuBY2E0qaE1zERg5gVnhdXK8ddFW00RTdBlbB0wJq1RsQuUNrUzNB6KZVHntUZOITCEq5eeemIAllI5cNlxw9pSpHffsuRgihc4LuC47rUcMKaSnuTDssOGkpwemLgtswkKRwCazdc/wDb6rjUOa1MdupDw9f0TXcVjCREWJhaFKf0THLDrInBNKmKa/h6oTUyEsXZVK9M5rTUNDE4U+iVvD74IgojiL4akaxPZ+6V2y4wiIS5U52y5qIwaGprgpXpj1xw1qlcoVLyXGM0GB1ZYRyKs1S4Du5Xapj0QZF8mf/Z" alt="">
+        <center><br><strong><center style="font-family:Arial, Helvetica, sans-serif"> It's said that we should always keep smiling, as it makes the world,
+            a beautiful place to Live in.</strong></center><br>
+            <p><center style="font-family:Arial, Helvetica, sans-serif">Our teeth form a major part of our smile and plays very important roles in our daily life.
+            One being, playing the key role in the digestion of the food we eat, starting in the Oral cavity itself.<br><br>
+        <h2>Let's learn a bit more about teeth!</h2><br> Majority of mammals including humans,
+            have 2 set of teeth during their life, first is the temporary set also called milk or deciduous teeth and
+        second being the permanent set. This type of dentition is called <strong>DIPHYODONT</strong>.
+            An adult human has 32 permanent teeth, which are of 4 different types, namely <strong>INCISORS, CANINES, PREMOLARS
+        and MOLARS</strong>. It's called <strong>Heterodont dentition</strong>. Out of all the types, only Pre-Molars are the teeth which
+            appears only once in lifetime.<br><br>
+            The hard-chewing surface covering teeth is made up of Enamel. It's the hardest substance of human body, secreted
+        by <strong>Ameloblast cells</strong>. Each tooth consists of 3 parts, namely Crown, Neck and Root. The Crown remains capped by
+        enamel. Both crown and root are composed of dentine, produced by <strong>Odontoblast cells</strong>, inside which a central pulp
+            cavity is present in which there is blood and nerve supply.<br><br>
+           <strong> Having so much knowledge about such a small teeth rises the curiosity to learn about the problems and remedies
+               related to keep our teeth healthy and safe.</strong></center></p>
+         <img src="https://www.dentistrywalnutcreek.com/wp-content/uploads/white-teeth.jpg" alt="" width="500" height="600">
+
+    </header>
+    <main>
+        <h1><center style="font-family:Arial, Helvetica, sans-serif"><br>Common problems related to our teeth:</center></h1><br>
+
+<li style="font-family:Arial, Helvetica, sans-serif"><strong>Cavities</strong>: Cavities are also called tooth decay
+    and are common. These are areas of the tooth that have been permanently damaged and may even have holes in them. They
+    occur when bacteria, food, and acid coats your teeth and form a plaque.</li>
+
+    <li style="font-family:Arial, Helvetica, sans-serif"><strong>Periodontitis</strong>: The infection can spread to your
+        jaw and bones. It can also cause an inflammatory response throughout the body.</li>
+    <li style="font-family:Arial, Helvetica, sans-serif"><strong>Oral cancer</strong>: Use of tobacco is the major risk
+        factor leading to oral cancer. Oral cancers include cancer of the:</li>
+    <ul><li style="font-family:Arial, Helvetica, sans-serif">Gums</li>
+        <li style="font-family:Arial, Helvetica, sans-serif">Tongue</li>
+        <li style="font-family:Arial, Helvetica, sans-serif">Lips</li>
+        <li style="font-family:Arial, Helvetica, sans-serif">Cheek</li>
+        <li style="font-family:Arial, Helvetica, sans-serif">floor of the mouth i.e. hard and soft palate</li></ul>
+    <li style="font-family:Arial, Helvetica, sans-serif"><strong>Gum disease</strong>: Gingivitis is a gum disease that
+        is reversible but, if not treated accordingly. may lead to a more serious problem called periodontal disease.</li>
+    <li style="font-family:Arial, Helvetica, sans-serif"><strong>Root Infection</strong>: A root infection occurs when
+        bacteria infects the root part of your teeth. It enters the center of your tooth tooth and attacks the pulp tissue
+        inside. Eventually. an abscess will form indicating that the root infection has developed to a more severe case
+        of ulcers or sores.</li>
+    <li style="font-family:Arial, Helvetica, sans-serif">Bleeding or swollen gums after brushing.</li>
+    <li style="font-family:Arial, Helvetica, sans-serif">Chronic bad breath.</li>
+    <li style="font-family:Arial, Helvetica, sans-serif">Sudden sensitivity to hot and cold temperatures or beverages.</li>
+    <li style="font-family:Arial, Helvetica, sans-serif">Pain or toothache</li>
+        <li style="font-family:Arial, Helvetica, sans-serif">Cracked or broken teeth</li>
+        <li style="font-family:Arial, Helvetica, sans-serif">Frequent dry mouth</li>
+<br>
+      <h1><center style="font-family:Arial, Helvetica, sans-serif">Natural ways to keep Our teeth Healthy:</center></h1>
+       <br> <img src="data:image/jpeg;base64,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" alt="">
+        <ul><li style="font-family:Arial, Helvetica, sans-serif"><strong>Brush your teeth</strong>: Brushing your teeth is important for removing
+            bacteria Cavities are primarily caused by the accumulation of Streptococcus mutants bacteria in your mouth These bacteria are
+            transmitted via food and drink. Brushing your teeth regularly can remove the bacteria that loss and cavities. may lead to
+            mineral</li>
+            <li style="font-family:Arial, Helvetica, sans-serif"><strong>Reducing Sugar in the food</strong>: Sugar is highly acidic and interacts with bacteria in the mouth by breaking down tooth
+                enamel. a higher frequency in sugar consumption led to demineralization.</li>
+            <li style="font-family:Arial, Helvetica, sans-serif"><strong>Use of Flouride Toothpaste</strong>: Fluoride toothpaste may prevent tooth decay and can also strengthen your teeth, making them
+                less susceptible to future mineral loss.</li>
+            <li style="font-family:Arial, Helvetica, sans-serif"><strong>Salt water</strong>:- Salt water is a natural disinfectant and can help release the food particles stuck between the teeth. The
+          concoction can also reduce inflammation and kill the harmful bacteria on the gums that are responsible for bad
+                breath and cavities.</li>
+            <li style="font-family:Arial, Helvetica, sans-serif"><strong>Use of Aloe Vera</strong>: studies say that aloe vera has many antibacterial properties that can and prevent tooth decay and
+                destroy germs. We can use aloe gel while suffering from toothache or gum problems.</li>
+            <li style="font-family:Arial, Helvetica, sans-serif"><strong>Use of Garlic</strong>: Garlic contains Allicin, which has antibacterial properties and is quite effective in killing bacteria responsible for tooth plaque and also acts as a painkiller<br><br>
+            <li style="font-family:Arial, Helvetica, sans-serif"><strong>Essential oils</strong>: they are effective to reduce nagging toothache. You can use clove or peppermint oil when suffering
+                from tooth or gum problems.</li>
+            <li style="font-family:Arial, Helvetica, sans-serif"><strong>Restrict tea and coffee</strong>: regular consumption of tea or coffee can lead to a brown tinge on your teeth making them look
+          dirty and unappealing. One way to avoid this is to restrict your coffee and tea intake, as too much of those
+                beverages are also not healthy.</li></ul>
+          <br><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfDOybptxVQ_PmXLjFK0MNx6RhoAG8_cGPAg&usqp=CAU" alt="">
+</p>
+
+    </main>
+  </div>
+</div>
+
+</body>
+</html>

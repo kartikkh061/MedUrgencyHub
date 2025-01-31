@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/diabetes.css')}}">
+        <style>
+        .nav{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px 0 25px;
+    background-color: #fff;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.10);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.nav .links a{
+    margin-right: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+.nav .links .mainlink{
+    color: #e0501b;
+}
+
+.nav h4{
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 25px;
+}
+.heading{
+    font-size:30px;
+
+}
+
+    </style>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&family=Open+Sans&display=swap");
+
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --border-color: #e0eeff;
+  --primary-color: #2563eb;
+  --article-width: 68ch;
+}
+
+.site-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+// text elements
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0.5em 0px;
+  padding: 0.5em 0px;
+  border-bottom: 1px solid var(--border-color);
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: bold;
+}
+
+h1 {
+  border-bottom: 1px solid #2563eb;
+}
+
+small {
+  font-size: 16px;
+}
+
+p,
+ul,
+ol,
+input,
+small {
+  line-height: 1.5em;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  margin: 1em 0px;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+  &:hover,
+  &:focus {
+    background: var(--primary-color);
+    color: white;
+  }
+}
+
+blockquote {
+  font-size: 24px;
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+  left: -16.5%;
+  margin: 0.5em 0px;
+  padding: 0.5em;
+  transition: all 0.3s ease-in;
+  cursor: text;
+  // border-left: 3px solid #2563eb;
+  @media screen and (max-width: 868px) {
+    left: 0%;
+    background: none;
+    color: black;
+    padding: 0px;
+  }
+  &:after {
+    content: "";
+    background: var(--primary-color);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 0%;
+    z-index: -1;
+    transition: all 0.3s ease-in;
+    transform-origin: left center;
+  }
+}
+
+blockquote.active {
+  color: white;
+  &:after {
+    width: 100%;
+  }
+}
+
+// layout elements
+
+.article {
+  position: relative;
+  max-width: var(--article-width);
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  margin: 0px 1.2em;
+  * {
+    z-index: 1;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    left: 33%;
+    height: 100%;
+    width: 1px;
+    z-index: -1;
+    background: var(--border-color);
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    left: 66%;
+    height: 100%;
+    width: 1px;
+    top: 0px;
+    z-index: -1;
+    background: var(--border-color);
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+    </style>
+    <title>Title</title>
+</head>
+<body>
+
+
+<div class="nav">
+            <div class="logo">
+                <h4>HealthCare Plus</h4>
+            </div>
+            <div class="links">
+                <a href="/home" >Home</a>
+                <a href="/corona">Corona Corner</a>
+                <a href="/articles">More Articles</a>
+            </div>
+        </div>
+<div class="site-wrapper">
+  <div class="article">
+    <header>
+        <br><br><center style="font-family:Arial, Helvetica, sans-serif"><h1>~~~Diabetes: Epidemic of the Century~~~</h1></center>
+       <br> <img src="https://news.yale.edu/sites/default/files/styles/featured_media/public/adobestock_276205639.jpeg?itok=PjcxEgaC&c=07307e7d6a991172b9f808eb83b18804" alt="">
+      <p><center style="font-family:Arial, Helvetica, sans-serif"><br><strong>One of the most challenging problem which is gripping the world into its hands is the problem of very high
+        glucose levels in the human body which is commonly known as Diabetes.</strong><br>
+        In clinical terms, <strong>Diabetes mellitus</strong>(DM) can be, commonly defined as a group of metabolic disorders
+          characterized by a high blood level sugar over a prolonged period of time. Symptoms often include frequent
+          urination, increased thirst, and increased appetite. This is not a single hereditary disease but a heterogeneous
+          group of diseases, -all of which ultimately lead to an elevation of glucose in the blood (hyperglycemia) and
+          loss of glucose in the urine as hyperglycemia increases.<br>
+        Usually 2 hormones, namely, <strong>Glucagon</strong>>(increases blood glucose level) and <strong>Insulin</strong> (decreases blood glucose level),
+          together help in maintaining a healthy glucose level in the body. Both of these hormones are produced by
+          the pancreas which also plays a major role in the digestion of food. Any defect in the organ or its hormone
+          producing cells can lead to Diabetes.</center><br><br>
+
+        <h1><center style="font-family:Arial, Helvetica, sans-serif">Types of Diabetes:</center></h1><br>
+         <p style="font-family:Arial, Helvetica, sans-serif"> <br>Major studies classify this metabolic Disorder in 3 types:<br></p>
+         <br><img src="https://storage.googleapis.com/1md/TypesDiabetesPrevention/TypesDiabetesPrevention-1.jpg" alt="">
+      </p>
+    </header>
+    <main><p style="font-family:Arial, Helvetica, sans-serif">
+      <h2><br>Now let us learn about some of the most common disorders related to the digestive system:</h2>
+
+        <ul><li><strong>Diabetes Mellitus Type-1</strong>: it is insulin -dependent diabetes Mellitus and is also known as Juvenile Onset
+          Diabetes. It most commonly develops in people younger than 20 years. It's auto-immune disorder in which the
+            body's immune system destroys the cells responsible for the production of insulin.</li>
+            <li><strong>Diabetes Mellitus Type-2</strong>: it is Non- Insulin dependent Diabetes Mellitus and is also known as Maturity Onset
+          Diabetes because it occurs later in life. Its arises not from the shortage of insulin but because target
+    cells became less sensitive to insulin. Obesity can be a cause of this type of diabetes.</li>
+            <li><strong>Gestational Diabetes</strong>: Gestational diabetes occurs when there is a high blood glucose level during pregnancy. As
+          pregnancy progresses, the developing baby has a greater need for glucose. Hormone changes during pregnancy
+                also affect the action of insulin, which brings about high blood glucose levels.</li>
+        <li>Some of the  signs and symptoms of diabetes are:</li>
+            <ul><li>Increased thirst</li>
+                <li>Frequent urination</li>
+                <li>Extreme Hunger</li>
+                <li>Fatigue</li>
+                <li>Unexplained weight loss</li>
+              <li>Irritability</li></ul>
+
+</p>
+
+<br>
+            <h1><center style="font-family:Arial, Helvetica, sans-serif">Ways to prevent and tackle diabetes:</center></h1>
+        <br><img src="https://www.dailynews.com/wp-content/uploads/2018/11/iStock-854725372-1.jpg?w=620" alt="">
+            <p style="font-family:Arial, Helvetica, sans-serif"><ul><li><strong>Exercise Regularly</strong>: Regular exercise can help you lose weight and increase insulin sensitivity. Increased
+                insulin sensitivity means your cells are better able to use the available in sugar in your bloodstream.</li>
+<li>Drink Water and Stay Hydrated: Drinking enough water may help you keep your blood sugar levels within healthy
+    limits.</li>
+                <li><strong>Eat real food rather than processed food</strong>: Real food (fruits, vegetables, fish, meat, seeds, and nuts) will help
+          you avoid refined carbohydrates, added sugars and  trans fats, all of which promote unhealthy weight gain and
+                    increase the risk of diabetes.</li>
+                <li>Use of Natural herbs with anti-diabetic properties like:</li>
+                <ul><li>Aloe vera</li>
+                    <li>Bilberry extract</li>
+                    <li>Bitter melon</li>
+<li>Fenugreek</li>
+<li>Ginger</li>
+                    <li>Okra</li></ul>
+                <li><strong>Say No to Alcohol</strong>: alcohol consumption is directly related to diabetes. It damages the pancreas and itself has
+                a lot of carbohydrates.</li></ul>
+
+         <br> <img src="https://res.cloudinary.com/grohealth/image/upload/$wpsize_!_cld_full!,w_672,h_454,c_scale/v1588091062/11899988_10153833056846996_8006582748912851534_n-672x454-1.jpg" alt="">
+
+
+<br>
+</p>
+
+    </main>
+  </div>
+</div>
+
+</body>
+</html>

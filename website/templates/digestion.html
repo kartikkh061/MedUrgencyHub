@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/digestion.css')}}">
+        <style>
+        .nav{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px 0 25px;
+    background-color: #fff;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.10);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.nav .links a{
+    margin-right: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+.nav .links .mainlink{
+    color: #e0501b;
+}
+
+.nav h4{
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 25px;
+}
+.heading{
+    font-size:30px;
+
+}
+
+    </style>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&family=Open+Sans&display=swap");
+
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --border-color: #e0eeff;
+  --primary-color: #2563eb;
+  --article-width: 68ch;
+}
+
+.site-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+// text elements
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0.5em 0px;
+  padding: 0.5em 0px;
+  border-bottom: 1px solid var(--border-color);
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: bold;
+}
+
+h1 {
+  border-bottom: 1px solid #2563eb;
+}
+
+small {
+  font-size: 16px;
+}
+
+p,
+ul,
+ol,
+input,
+small {
+  line-height: 1.5em;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  margin: 1em 0px;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+  &:hover,
+  &:focus {
+    background: var(--primary-color);
+    color: white;
+  }
+}
+
+blockquote {
+  font-size: 24px;
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+  left: -16.5%;
+  margin: 0.5em 0px;
+  padding: 0.5em;
+  transition: all 0.3s ease-in;
+  cursor: text;
+  // border-left: 3px solid #2563eb;
+  @media screen and (max-width: 868px) {
+    left: 0%;
+    background: none;
+    color: black;
+    padding: 0px;
+  }
+  &:after {
+    content: "";
+    background: var(--primary-color);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 0%;
+    z-index: -1;
+    transition: all 0.3s ease-in;
+    transform-origin: left center;
+  }
+}
+
+blockquote.active {
+  color: white;
+  &:after {
+    width: 100%;
+  }
+}
+
+// layout elements
+
+.article {
+  position: relative;
+  max-width: var(--article-width);
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  margin: 0px 1.2em;
+  * {
+    z-index: 1;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    left: 33%;
+    height: 100%;
+    width: 1px;
+    z-index: -1;
+    background: var(--border-color);
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    left: 66%;
+    height: 100%;
+    width: 1px;
+    top: 0px;
+    z-index: -1;
+    background: var(--border-color);
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+    </style>
+    <title>Title</title>
+</head>
+<body>
+
+
+<div class="nav">
+            <div class="logo">
+                <h4>HealthCare Plus</h4>
+            </div>
+            <div class="links">
+                <a href="/home" >Home</a>
+                <a href="/corona">Corona Corner</a>
+                <a href="/articles">More Articles</a>
+            </div>
+        </div>
+<div class="site-wrapper">
+  <div class="article">
+    <header>
+        <br><br><p><center style="font-family:Arial, Helvetica, sans-serif"><h1>~~~Your Gut Feeling: A Healthier Digestive System~~~</h1>
+        <img src="https://blogs.biomedcentral.com/on-medicine/wp-content/uploads/sites/6/2019/09/iStock-1131794876.t5d482e40.m800.xtDADj9SvTVFjzuNeGuNUUGY4tm5d6UGU5tkKM0s3iPk-620x342.jpg" alt="">
+        <br><strong>It is commonly said that, the to a Man's way heart goes through his stomach."</strong><br>
+          But the actual fact is that this is applicable to every individual in every age of the life.
+          Having a healthy digestive system improves the overall health of the body as it plays a crucial role in absorbing
+          the essential nutrients from the food we eat. The food that we eat is broken down to simple substances in our
+          digestive system.<br><br>
+          This process of conversion of food into simple absorbable forms is called Digestion.
+          Now let us learn a bit  more about Our digestive system.<br></center></p>
+        <h1><center>How does the Digestive system works?</center></h1>
+         <br><img src="https://kidsdiscover.blob.core.windows.net/kdoassets/uploads/infographics/Digestive-System-Infographic-Kids-Discover%20.jpg" alt="">
+
+    </header>
+    <main>
+      <h2><center style="font-family:Arial, Helvetica, sans-serif"<br>Now let us learn about some of the most common disorders related to the digestive system:</center></h2>
+      <p style="font-family:Arial, Helvetica, sans-serif">
+        <ul><li><strong>Jaundice</strong>: the bile pigments of the liver increases in the blood causing Yellowness in the skin and the Eyes. The
+        liver is also affected.</li>
+
+        <li><strong>Vomiting</strong>: it's the ejection of stomach contents through the mouth. This reflex action is controlled by the Vomit
+    center in the lower back part of the brain. Feeling of Nausea precedes vomiting.<br></li>
+        <li><strong>Diarrhea</strong>: the abnormal frequency of bowel movement and increased liquidity of fecal discharge is known as diarrhea.
+    It reduces absorption of food.</li>
+        <li><strong>Constipation</strong>: in this disorder, the faeces is retained within the rectum as the bowel movement occurs irregularly.</li>
+        <li><strong>Indigestion</strong>: the food is not properly digested leading to a feeling of fullness. The causes are inadequate enzyme
+          secretion, anxiety, food poisoning over eating and spicy food. Gaining knowledge about the working of the
+    system and the related disorders, increases the curiosity to know about the improve ways to its health as well.</li></ul>
+    <p style="font-family:Arial, Helvetica, sans-serif">So let us learn about some common and natural to ways raise our digestive health.</p>
+
+<br>
+        <h2><center style="font-family:Arial, Helvetica, sans-serif">Ways to Improve Upon Digestion and Digestive System:</center></h2>
+        <br><img src="https://www.cdc.gov/nccdphp/dnpao/features/national-nutrition-month/national-nutrition-month_600px.jpg" alt="">
+      <p style="font-family:Arial, Helvetica, sans-serif"><ul><li><strong>Taking food rich in high Fiber<strong>: Consuming a high-fiber diet that's rich in whole grains, vegetables, fruits
+          , and legumes can improve your digestive health. A high-fiber diet helps to keep food moving through your
+        digestive tract, making you less likely to get constipated.</li>
+
+        <li><strong>Chewing the food properly</strong>: The process of digestion starts right in the mouth itself. Chewing food results in
+          producing saliva in the mouth which in turn releases digestive enzymes which help in digestion. More we chew,
+            more saliva is released and it can help tackle problems like indigestion and heart-burns.</li>
+        <li><strong>Staying Always Hydrated</strong>: Water plays a vital role in digestion. It helps in preventing constipation and other
+            digestion related issues. We must take at least 1.5-2 liters of water on a daily basis.</li>
+        <li><strong>Doing Exercise Regularly</strong>: Exercise can have a very positive impact on our digestive system. It can help relieve
+            stress, strengthen abdominal muscles, and stimulate food to move through the large intestine as well.</li>
+        <li><strong>Cut back on Alcohol drinking</strong>: many people experience diarrhea after alcohol drinking. This is because the
+            digestive system gets inflamed and reduces water absorption which leads to such a problem.</li>
+<li><strong>Stop smoking</strong>: smoking can lead to a lot of digestive disorders like peptic ulcers, heartburn and worsen conditions
+          involving Crohn's disease. One major advantage of quitting smoking that that it reverses some of the ill effects
+    that occurred to you smoking quickly.</li>
+        <li><strong>Eat plenty of fruits and vegetables</strong>: Fruits and vegetables are among the most important foods for supplying the
+            vitamins, minerals and fiber our body needs for good health and normal immune function.</li>
+
+        <li><strong>Taking fermented loads</strong>: Fermented foods such as probiotic yogurt, may help improve digestive problems. Fermented
+          foods have been partially or wholly broken down by microorganisms such as bacteria. These microorganisms work to
+            preserve food, and they may also benefit gut health. Some fermented foods include:</li>
+        <ul><li>Probiotic yogurt</li>
+            <li>Sourdough bread</li>
+            <li>Sauerkraut</li>
+            <li>Kefir</li>
+            <li>Miso</li></ul></ul>
+          <br><img src="https://www.azquotes.com/picture-quotes/quote-now-good-digestion-wait-on-appetite-and-health-on-both-william-shakespeare-103-29-21.jpg" alt="">
+
+<br>
+</p>
+
+    </main>
+  </div>
+</div>
+
+</body>
+</html>
